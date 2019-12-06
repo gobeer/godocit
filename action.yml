@@ -1,4 +1,4 @@
-name: "godocit"
+name: "godocit-testing"
 description: "Automatically create documentation issues for PRs"
 
 inputs:
