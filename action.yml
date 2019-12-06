@@ -1,0 +1,16 @@
+name: "godocit"
+description: "Automatically create documentation issues for PRs"
+
+inputs:
+  installationID: # id of input
+    description: "GitHub App's installation ID"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    - PRIVATE_KEY: ${{ secrets.PrivateKey }}
+    - INSTALLATION_ID: ${{ secrets.InstallationID }}
+  args:
+    - ${{ inputs.who-to-greet }}
