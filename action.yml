@@ -10,7 +10,5 @@ runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    - PRIVATE_KEY: ${{ secrets.PrivateKey }}
-    - INSTALLATION_ID: ${{ secrets.InstallationID }}
-  args:
-    - ${{ inputs.who-to-greet }}
+    PRIVATE_KEY: ${{ secrets.PrivateKey }}
+    INSTALLATION_ID: ${{ secrets.InstallationID }}
