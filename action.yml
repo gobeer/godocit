@@ -9,6 +9,3 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  env:
-    PRIVATE_KEY: ${{ secrets.PrivateKey }}
-    INSTALLATION_ID: ${{ secrets.InstallationID }}
