@@ -1,12 +1,10 @@
 FROM golang:1.13-alpine
 
-RUN mkdir -p $GOPATH/src/go.txtdirect.org/godocit
-
-WORKDIR $GOPATH/src/go.txtdirect.org/godocit
+WORKDIR /app/godocit
 
 COPY . .
 
 RUN GO111MODULE=on go build
 
-ENTRYPOINT ["./godocit"]
+ENTRYPOINT ["/app/godocit/godocit"]
 
