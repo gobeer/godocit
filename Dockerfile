@@ -6,7 +6,7 @@ WORKDIR $GOPATH/src/go.txtdirect.org/godocit
 
 COPY . .
 
-RUN GO111MODULE=on go install
+RUN GO111MODULE=on go build
 
-ENTRYPOINT ["../../../bin/godocit"]
+ENTRYPOINT ["./godocit"]
 
