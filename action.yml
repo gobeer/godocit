@@ -9,4 +9,3 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  env: ["TARGET_REPO": "${{ inputs.targetRepo }}"]
